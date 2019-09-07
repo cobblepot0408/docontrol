@@ -1,0 +1,254 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'segoe ui';
+	background: #f0f;
+}
+
+.wrapper{
+	width: 100%;
+	height: 100%;
+}
+
+.nav-top{
+	width: 100%;
+	display: block;
+	height: 65px;
+	border-bottom: 1px solid #dadce0;
+	background: #f0f;
+}
+
+
+.nav-top .logo-container{
+	background: #fff;
+	width: 250px;
+	height: 100%;
+	float: left;
+}
+
+.nav-top .comp-container{
+	width: calc(100% - 250px);
+	background: #fff;
+	display: inline-block;
+	height: 100%;
+	float: left;
+	padding: 8px 10px;
+}
+
+
+.nav-top .comp-container .search-container{
+	float: left;
+}
+
+.nav-top .comp-container .search-container input[type=text]{
+	float: left;
+	font-size: 17px;
+	border: 1px solid #06a4b3;
+	width: 600px;
+	height: 47px;
+	padding: 0 15px;
+	background: #f1f3f4;
+	border-radius: 5px 0 0 5px;
+}
+
+.nav-top .comp-container .search-container button{
+	float: right;
+	background: #06a4b3;
+	font-size: 17px;
+	height: 47px;
+	width: auto;
+	color: #fff;
+	border: none;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+}
+
+
+.nav-top .comp-container .account-container{
+	float: right;
+}
+
+
+.nav-top .comp-container .account-container button{
+	float: right;
+	margin: 5px 5px;
+	background: #06a4b3;
+	font-size: 17px;
+	height: 35px;
+	width: 35px;
+	border: none;
+	color: #fff;
+	border-radius: 100px;
+	cursor: pointer;
+}
+
+.nav-top .nav-btn{
+	display: none;
+}
+
+.nav-top #navcheck{
+	display: none;
+}
+
+/*END NAVIGATION TOP*/
+
+
+.main-content{
+	background: #f0f;
+	height: calc(100vh - 65px);
+	width: 100%;
+}
+
+
+.main-content .side-bar{
+	background: #fff;
+	width: 250px;
+	height: 100%;
+	float: left;
+}
+
+.main-content .side-bar button{
+	border: 1px solid #dadce0;
+	margin-top: 15px;
+	border-radius: 30px;
+	cursor: pointer;
+	margin-left: 15px;
+	background: white;
+	font-size: 20px;
+	padding: 15px 20px;
+	width: 55%;
+}
+
+.main-content .side-bar .side-links{
+	display: inline-block;
+	width: 100%;
+	margin-top: 10px;
+}
+.main-content .side-bar .side-links img{
+	display: inline-block;
+	width: 25px;
+	float: left;
+	margin-top: 5px;
+	height: 25px;
+}
+.main-content .side-bar .side-links a{
+	display: block;
+	line-height: 40px;
+	margin-right: 20px;
+	height: 40px;
+	border-radius: 0px 20px 20px 0px;
+	padding: 0 15px;
+	text-decoration: none;
+	color: #000;
+}
+.main-content .side-bar .side-links a:hover{
+	background: #e8f0fe;
+}
+.main-content .side-bar .side-links a span{
+	padding-right: 25px;
+}
+
+.main-content .doc-content{
+	float: right;
+	width: calc(100% - 250px);
+	height: 100%;
+	background: #262626;
+}
+/*END OF MAIN CONTENT*/
+
+
+
+
+/* MEDIA QUERY*/
+
+@media screen and (max-width: 1300px) {
+
+	.nav-top .nav-btn {
+	    display: inline-block;
+	    position: absolute;
+	    right: 0px;
+	    top: 20px;
+  	}
+
+  	.nav-top .nav-btn label{
+  		display: inline-block;
+    	padding: 0 20px;
+  	}
+  	.nav-top .nav-btn label span{
+  		display: block;
+  		width: 25px;
+  		height: 10px;
+  		border-top: 2px solid black;
+  	}
+
+	.nav-top{
+		margin: 0;
+		padding: 0;
+	}
+	.nav-top .logo-container{
+		background: #fff;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		float: left;
+	}
+	.nav-top .comp-container{
+		margin: 0;
+		float: none;
+		padding: 0;
+		position: absolute;
+  		display: block;
+  		width: 100%;
+  		background: #262626;
+  		overflow-y: hidden;
+  		transition: all 0.3s ease-in;
+  		top: 65px;
+  		left: 0;
+	}
+	.nav-top .comp-container .search-container{
+		float: none;
+		display: block;
+		width: 100%;
+		margin: 0px;
+
+	}
+	.nav-top .comp-container .search-container input[type=text]{
+		float: none;
+		display: block;
+		border-radius: 0;
+		width: 100vw;
+	}
+	.nav-top .comp-container .search-container button{
+		float: none;
+		display: bloc;
+		border-radius: 0;
+		width: 100vw;
+	}
+	.nav-top .comp-container .account-container{
+		float: none;
+		display: block;
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+	}
+	.nav-top .comp-container .account-container button{
+		float: none;
+		display: block;
+		border-radius: 0;
+		margin: 0px;
+		padding: 0px;
+		width: 100vw;
+	}
+	.nav-top #navcheck:not(checked) ~ .comp-container{
+  		height: 0px;
+  	}
+
+  	.nav-top #navcheck:checked ~ .comp-container{
+  		height: calc(100vh - 65px);
+  		overflow-y: auto;
+  		width: 100%;
+  	}
+}
