@@ -5,7 +5,7 @@ body{
 	padding: 0;
 	margin: 0;
 	font-family: 'segoe ui';
-	background: #f0f;
+	background: #fff;
 }
 
 .wrapper{
@@ -73,7 +73,7 @@ body{
 
 
 .nav-top .comp-container .account-container button{
-	float: right;
+	float: left;
 	margin: 5px 5px;
 	background: #06a4b3;
 	font-size: 17px;
@@ -83,6 +83,15 @@ body{
 	color: #fff;
 	border-radius: 100px;
 	cursor: pointer;
+}
+
+.nav-top .comp-container .account-container button span#text{
+	display: none;
+}
+.nav-top .comp-container .account-container button img{
+	width: 100%;
+	height: 100%;
+	padding: 8px 3px;
 }
 
 .nav-top .nav-btn{
@@ -155,21 +164,63 @@ body{
 	float: right;
 	width: calc(100% - 250px);
 	height: 100%;
+	overflow-y: scroll;
+	max-height: 100%;
 	background: #262626;
 }
 /*END OF MAIN CONTENT*/
 
+.mydocuments{
+	width: 100%;
+	height: 50%;
+	background: #fff;
+}
 
+.mydocuments .my-subtitle{
+	display: block;
+	font-size: 20px;
+	color: #6b6c6d;
+	width: 100%;
+	padding: 5px;
+}
 
+.mydocuments .doc-title{
+	width: 100%;
+	display: inline-block;
+	height: 100vw;
+	padding: 5px;
+	float: left;
+	margin-top: 5px;
+	background: #fff;
+}
+.mydocuments .doc-title table{
+}
+.mydocuments .doc-title table tr{
+	height: 30px;
+	width: 100%;
+}
+.mydocuments .doc-title table tr .bottom-border{
+	
+}
+.mydocuments .doc-title table tr td img{
+	width: 20px;
+	height: 20px;
+}
+.contento2{
+	width: 100%;
+	height: 100%;
+	background: #0ff;
+}
 
 /* MEDIA QUERY*/
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1050px) {
 
 	.nav-top .nav-btn {
 	    display: inline-block;
 	    position: absolute;
 	    right: 0px;
+		margin-bottom: 5px;
 	    top: 20px;
   	}
 
@@ -190,21 +241,29 @@ body{
 	}
 	.nav-top .logo-container{
 		background: #fff;
+		margin-bottom: 5px;
 		width: 100%;
 		margin: 0;
 		padding: 0;
 		float: left;
+	}
+	.nav-top .comp-container .account-container button span#text{
+		display: block;
+	}
+	.nav-top .comp-container .account-container button span#icon{
+		display: none;
 	}
 	.nav-top .comp-container{
 		margin: 0;
 		float: none;
 		padding: 0;
 		position: absolute;
+		margin-bottom: 5px;
   		display: block;
   		width: 100%;
   		background: #262626;
   		overflow-y: hidden;
-  		transition: all 0.3s ease-in;
+  		transition: all 0.1s ease-in;
   		top: 65px;
   		left: 0;
 	}
@@ -218,13 +277,15 @@ body{
 	.nav-top .comp-container .search-container input[type=text]{
 		float: none;
 		display: block;
+		margin-bottom: 5px;
 		border-radius: 0;
 		width: 100vw;
 	}
 	.nav-top .comp-container .search-container button{
 		float: none;
-		display: bloc;
+		display: block;
 		border-radius: 0;
+		margin-bottom: 5px;
 		width: 100vw;
 	}
 	.nav-top .comp-container .account-container{
@@ -234,11 +295,12 @@ body{
 		margin: 0px;
 		padding: 0px;
 	}
-	.nav-top .comp-container .account-container button{
+	.nav-top .comp-container .account-container .link-circle button{
 		float: none;
 		display: block;
 		border-radius: 0;
 		margin: 0px;
+		margin-bottom: 5px;
 		padding: 0px;
 		width: 100vw;
 	}
@@ -247,7 +309,8 @@ body{
   	}
 
   	.nav-top #navcheck:checked ~ .comp-container{
-  		height: calc(100vh - 65px);
+  		height: auto;
+  		padding: 10px 0;
   		overflow-y: auto;
   		width: 100%;
   	}
