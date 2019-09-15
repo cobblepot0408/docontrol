@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!--BUTTON ADD NEW DOCUMENTS-->
+  <div class="dropdown">
+    <button class="btn" type="button" data-toggle="dropdown"><span>+</span>New
+    </button>
+    <ul class="dropdown-menu" style="padding: 10px;">
+      <li style="border-bottom: 1px solid black;"><a href="#" data-toggle="modal" data-target="#myModal">Add Folder</a></li>
+      <li><a href="#">Upload File</a></li>
+      <li><a href="#">Upload Folder</a></li>
+      <li><a href="#">Scan Upload</a></li>
+    </ul>
+  </div>
+<!--END BUTTON ADD NEW DOCUMENTS-->
+
+
+
+<!--MODAL FOR ADD NEW FOLDER-->
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">New Folder</h4>
+      </div>
+      <div class="modal-body">
+        <input class="inputaddnewmodal" type="text" placeholder="Untitled Folder">
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-default">Create</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--END MODAL FOR ADD NEW FOLDER-->
+</body>
+</html>
